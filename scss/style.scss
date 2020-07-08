@@ -1,0 +1,275 @@
+// ========================================================== fonts ==========================
+@font-face {
+    font-family: "Teko";
+    src: url("../assets/fonts/teko.ttf");
+}
+
+@font-face {
+    font-family: "Verdana";
+    src: url("../assets/fonts/verdana.ttf");
+}
+
+// ---------------------------------------------------------- / fonts ------------------------
+// ========================================================== mixins =========================
+// ---------------------------------------------------------- / mixins -----------------------
+// ========================================================== variables ======================
+$brand_main_collor: #ffdb73;
+$brand_secondary_collor: #444349;
+// ---------------------------------------------------------- / variables --------------------
+// ========================================================== commons ========================
+.wrapper {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+body {
+    font-family: "Teko";
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+// ---------------------------------------------------------- / commons ----------------------
+// ========================================================== intro ==========================
+.section_intro {
+    .top-bar {
+        padding: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        &__logo {
+            display: flex;
+            align-items: center;
+            font-size: 40px;
+            color: $brand_secondary_collor;
+            border-bottom: 2px solid $brand_main_collor;
+        }
+        &__right_panel {
+            display: flex;
+            .contacts_list {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                li+li {
+                    border-left: 1px solid #e1e1e1;
+                    margin-left: 25px;
+                    padding-left: 25px;
+                }
+                li {
+                    font-size: 24px;
+                    line-height: 1;
+                    font-weight: 400;
+                    letter-spacing: .075em;
+                    i {
+                        color: $brand_main_collor;
+                        margin-right: 12px;
+                        font-size: 20px;
+                    }
+                }
+                .work_hours {
+                    i {
+                        font-size: 22px;
+                    }
+                }
+                .phone_number a {
+                    transition: .2s;
+                    &:hover {
+                        color: $brand_main_collor;
+                    }
+                }
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 16px;
+                line-height: 1.5;
+                letter-spacing: 0.08em;
+                border: 2px solid #151515;
+                margin-left: 42px;
+                transition: .2s;
+                &:hover {
+                    background-color: $brand_main_collor;
+                    border-color: $brand_main_collor;
+                    color: #ffffff;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    .mid-bar {
+        background-color: $brand_secondary_collor;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            ul {
+                display: flex;
+                align-items: center;
+            }
+            .menu {
+                .active {
+                    border-top: 3px solid $brand_main_collor;
+                    background-color: #ffffff1f;
+                }
+                &__item {
+                    padding: 20px;
+                    font-size: 18px;
+                    letter-spacing: .05em;
+                    text-transform: uppercase;
+                    border-top: 3px solid $brand_secondary_collor;
+                    transition: .2s;
+                    a {
+                        color: #ffffff;
+                    }
+                    &:hover {
+                        border-top: 3px solid $brand_main_collor;
+                    }
+                }
+            }
+            .messenger-list {
+                &__item {
+                    &+li {
+                        padding-left: 20px;
+                    }
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    font-size: 18px;
+                    i {
+                        color: #ffffff;
+                        transition: .2s;
+                        &:hover {
+                            color: $brand_main_collor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .carousel-area {
+        background: #c0c0c0 url(../assets/carousel/1564394886_kartinki_oboi_devushka_model_poza_devushka_shatenka_vzglja.jpg);
+        background-size: cover;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .carousel_content {
+            text-align: center;
+            text-transform: uppercase;
+            &__subtitle {
+                font-weight: 400;
+                letter-spacing: .15em;
+                color: $brand_main_collor;
+                line-height: 1.15;
+            }
+            &__title {
+                margin-top: 30px;
+                margin-bottom: 30px;
+                max-width: 540px;
+                font-size: 70px;
+                line-height: 1;
+                color: #ffffff;
+            }
+            &__button {
+                padding: 17px 33px;
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: 0.1em;
+                border: 2px solid $brand_main_collor;
+                background-color: $brand_main_collor;
+                color: $brand_secondary_collor;
+                font-weight: 600;
+                transition: .2s;
+                &:hover {
+                    background-color: lighten($brand_main_collor, 7%);
+                    border-color: lighten($brand_main_collor, 7%);
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------- / intro ------------------------
+// ========================================================== about ==========================
+.section_about {
+    .area_promo {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        display: flex;
+    }
+    .promo_box+.promo_box {
+        margin-left: 30px;
+    }
+    .promo_box {
+        text-align: center;
+        max-width: 370px;
+        padding: 66px 15px 50px;
+        background: #ffffff;
+        box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
+        transition: all .3s ease;
+        margin-bottom: 40px;
+        &__icon {}
+        &__title {
+            font-size: 24px;
+            letter-spacing: 0.05em;
+        }
+        &__decorLine {
+            position: relative;
+            max-width: 126px;
+            width: 100px;
+            height: 2px;
+            margin: 20px auto 22px;
+            &::before {
+                position: absolute;
+                content: '';
+                height: 100%;
+                left: 15px;
+                right: 15px;
+                background: #d7d7d7;
+                transition: all .3s ease;
+            }
+        }
+        &__description {
+            font-size: 14px;
+            font-family: "Verdana", "sans-serif";
+            letter-spacing: 0.05em;
+        }
+        &:hover {
+            box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
+        }
+        &:hover .promo_box__decorLine::before {
+            left: 0px;
+            right: 0px;
+            background: $brand_main_collor;
+        }
+    }
+}
+
+// ========================================================== / about ========================
+// ========================================================== vacancy ========================
+.section_vacancy {}
+
+// ========================================================== / vacancy ======================
+// ========================================================== gallery ========================
+.section_gallery {}
+
+// ========================================================== / gallery ======================
+// ========================================================== contacts =======================
+.section_contacts {}
+
+// ========================================================== / contacts =====================
+// ========================================================== anketa =========================
+.section_anketa {}
+
+// ========================================================== / anketa =======================
