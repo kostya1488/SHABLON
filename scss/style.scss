@@ -47,8 +47,18 @@ a {
     cursor: pointer;
 }
 
-.brand_button {
+section {
+    padding-bottom: 80px;
+}
+
+.section_title {
+    font-size: 48px;
+    line-height: 1.20833;
+}
+
+.brand_main_button {
     display: inline-block;
+    text-align: center;
     padding: 17px 33px;
     font-size: 18px;
     line-height: 1.5;
@@ -62,6 +72,25 @@ a {
     &:hover {
         background-color: lighten($brand_main_color, 7%);
         border-color: lighten($brand_main_color, 7%);
+    }
+}
+
+.brand_secondary_button {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 22px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    border: 2px solid #151515;
+    transition: .2s;
+    text-transform: uppercase;
+    min-width: 100px;
+    &:hover {
+        background-color: $brand_main_color;
+        border-color: $brand_main_color;
+        color: #ffffff;
+        font-weight: 600;
     }
 }
 
@@ -113,20 +142,8 @@ a {
                     }
                 }
             }
-            .btn {
-                padding: 12px 22px;
-                font-size: 16px;
-                line-height: 1.5;
-                letter-spacing: 0.08em;
-                border: 2px solid #151515;
-                margin-left: 42px;
-                transition: .2s;
-                &:hover {
-                    background-color: $brand_main_color;
-                    border-color: $brand_main_color;
-                    color: #ffffff;
-                    font-weight: 600;
-                }
+            a {
+                margin-left: 60px;
             }
         }
     }
@@ -273,6 +290,7 @@ a {
         }
         &:hover {
             box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
+            transform: scale(1.02);
             .promo_box__decorLine::before {
                 left: 0px;
                 right: 0px;
@@ -372,6 +390,7 @@ a {
                 left: 0;
                 font-family: $brand_secondary_font;
                 color: #9b9b9b;
+                font-size: 14px;
                 line-height: 1.4;
             }
         }
@@ -380,7 +399,87 @@ a {
 
 // ========================================================== / about ========================
 // ========================================================== vacancy ========================
-.section_vacancy {}
+.section_vacancy {
+    .section_title {
+        text-align: center;
+    }
+    .vacancy_item {
+        display: flex;
+        height: 336px;
+        border: 1px solid #e1e1e1;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        &:hover .photo {
+            transform: scale(1);
+        }
+    }
+    .vac_1 {
+        .photo {
+            background: url(../assets/img/anastasiia-liiman-nastia-devushka-poza-krasnoe-plate-plate-d.jpg) no-repeat center center;
+            background-size: auto 100%;
+        }
+        .content_outner_wrap::before {
+            content: '100 000 грн';
+        }
+    }
+    .vac_2 {
+        .photo {
+            background: url(../assets/img/BoaN4PPfQUI.jpg) no-repeat center center;
+            background-size: 100% auto;
+        }
+        .content_outner_wrap::before {
+            content: '30 000 грн';
+        }
+    }
+    .photo_block {
+        flex: 1;
+        overflow: hidden;
+        .photo {
+            height: 100%;
+            transform: scale(1.1);
+            transition: .3s;
+        }
+    }
+    .content_outner_wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 140px;
+            text-align: center;
+            line-height: 80px;
+            font-size: 1.5em;
+            letter-spacing: .025em;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
+            background-color: $brand_main_color;
+        }
+    }
+    .content_block {
+        padding: 30px 80px;
+        &__title {
+            letter-spacing: .075em;
+            font-size: 24px;
+            a {
+                transition: .3s;
+                &:hover {
+                    color: $brand_main_color;
+                }
+            }
+        }
+        &__description {
+            font-family: $brand_secondary_font;
+            color: #9b9b9b;
+            line-height: 1.4em;
+            font-size: 14px;
+            margin: 25px 0 30px;
+        }
+    }
+}
 
 // ========================================================== / vacancy ======================
 // ========================================================== gallery ========================

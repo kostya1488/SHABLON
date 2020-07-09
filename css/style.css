@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Teko";
   src: url("../assets/fonts/teko.ttf"); }
@@ -29,8 +30,16 @@ a {
   color: black;
   cursor: pointer; }
 
-.brand_button {
+section {
+  padding-bottom: 80px; }
+
+.section_title {
+  font-size: 48px;
+  line-height: 1.20833; }
+
+.brand_main_button {
   display: inline-block;
+  text-align: center;
   padding: 17px 33px;
   font-size: 18px;
   line-height: 1.5;
@@ -41,9 +50,26 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   transition: .2s; }
-  .brand_button:hover {
+  .brand_main_button:hover {
     background-color: #ffd764;
     border-color: #ffd764; }
+
+.brand_secondary_button {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 22px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  border: 2px solid #151515;
+  transition: .2s;
+  text-transform: uppercase;
+  min-width: 100px; }
+  .brand_secondary_button:hover {
+    background-color: #ffce40;
+    border-color: #ffce40;
+    color: #ffffff;
+    font-weight: 600; }
 
 .section_intro .top-bar {
   padding: 15px 0;
@@ -80,19 +106,8 @@ a {
         transition: .2s; }
         .section_intro .top-bar__right_panel .contacts_list .phone_number a:hover {
           color: #ffce40; }
-    .section_intro .top-bar__right_panel .btn {
-      padding: 12px 22px;
-      font-size: 16px;
-      line-height: 1.5;
-      letter-spacing: 0.08em;
-      border: 2px solid #151515;
-      margin-left: 42px;
-      transition: .2s; }
-      .section_intro .top-bar__right_panel .btn:hover {
-        background-color: #ffce40;
-        border-color: #ffce40;
-        color: #ffffff;
-        font-weight: 600; }
+    .section_intro .top-bar__right_panel a {
+      margin-left: 60px; }
 
 .section_intro .mid-bar {
   background-color: #444349; }
@@ -207,7 +222,8 @@ a {
     font-family: "Verdana", "sans-serif";
     letter-spacing: 0.05em; }
   .section_about .promo_box:hover {
-    box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4); }
+    box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02); }
     .section_about .promo_box:hover .promo_box__decorLine::before {
       left: 0px;
       right: 0px;
@@ -289,4 +305,73 @@ a {
       left: 0;
       font-family: "Verdana";
       color: #9b9b9b;
+      font-size: 14px;
       line-height: 1.4; }
+
+.section_vacancy .section_title {
+  text-align: center; }
+
+.section_vacancy .vacancy_item {
+  display: flex;
+  height: 336px;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 50px;
+  margin-top: 50px; }
+  .section_vacancy .vacancy_item:hover .photo {
+    transform: scale(1); }
+
+.section_vacancy .vac_1 .photo {
+  background: url(../assets/img/anastasiia-liiman-nastia-devushka-poza-krasnoe-plate-plate-d.jpg) no-repeat center center;
+  background-size: auto 100%; }
+
+.section_vacancy .vac_1 .content_outner_wrap::before {
+  content: '100 000 грн'; }
+
+.section_vacancy .vac_2 .photo {
+  background: url(../assets/img/BoaN4PPfQUI.jpg) no-repeat center center;
+  background-size: 100% auto; }
+
+.section_vacancy .vac_2 .content_outner_wrap::before {
+  content: '30 000 грн'; }
+
+.section_vacancy .photo_block {
+  flex: 1;
+  overflow: hidden; }
+  .section_vacancy .photo_block .photo {
+    height: 100%;
+    transform: scale(1.1);
+    transition: .3s; }
+
+.section_vacancy .content_outner_wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .section_vacancy .content_outner_wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 140px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.5em;
+    letter-spacing: .025em;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
+    background-color: #ffce40; }
+
+.section_vacancy .content_block {
+  padding: 30px 80px; }
+  .section_vacancy .content_block__title {
+    letter-spacing: .075em;
+    font-size: 24px; }
+    .section_vacancy .content_block__title a {
+      transition: .3s; }
+      .section_vacancy .content_block__title a:hover {
+        color: #ffce40; }
+  .section_vacancy .content_block__description {
+    font-family: "Verdana";
+    color: #9b9b9b;
+    line-height: 1.4em;
+    font-size: 14px;
+    margin: 25px 0 30px; }
