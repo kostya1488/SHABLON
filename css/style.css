@@ -13,7 +13,8 @@
 .sticky {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
 
 body {
   font-family: "Teko"; }
@@ -28,6 +29,22 @@ a {
   color: black;
   cursor: pointer; }
 
+.brand_button {
+  display: inline-block;
+  padding: 17px 33px;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  border: 2px solid #ffce40;
+  background-color: #ffce40;
+  color: #444349;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: .2s; }
+  .brand_button:hover {
+    background-color: #ffd764;
+    border-color: #ffd764; }
+
 .section_intro .top-bar {
   padding: 15px 0;
   display: flex;
@@ -37,7 +54,7 @@ a {
     align-items: center;
     font-size: 40px;
     color: #444349;
-    border-bottom: 2px solid #ffdb73; }
+    border-bottom: 2px solid #ffce40; }
   .section_intro .top-bar__right_panel {
     display: flex; }
     .section_intro .top-bar__right_panel .contacts_list {
@@ -54,7 +71,7 @@ a {
         font-weight: 400;
         letter-spacing: .075em; }
         .section_intro .top-bar__right_panel .contacts_list li i {
-          color: #ffdb73;
+          color: #ffce40;
           margin-right: 12px;
           font-size: 20px; }
       .section_intro .top-bar__right_panel .contacts_list .work_hours i {
@@ -62,7 +79,7 @@ a {
       .section_intro .top-bar__right_panel .contacts_list .phone_number a {
         transition: .2s; }
         .section_intro .top-bar__right_panel .contacts_list .phone_number a:hover {
-          color: #ffdb73; }
+          color: #ffce40; }
     .section_intro .top-bar__right_panel .btn {
       padding: 12px 22px;
       font-size: 16px;
@@ -72,8 +89,8 @@ a {
       margin-left: 42px;
       transition: .2s; }
       .section_intro .top-bar__right_panel .btn:hover {
-        background-color: #ffdb73;
-        border-color: #ffdb73;
+        background-color: #ffce40;
+        border-color: #ffce40;
         color: #ffffff;
         font-weight: 600; }
 
@@ -86,7 +103,7 @@ a {
       display: flex;
       align-items: center; }
     .section_intro .mid-bar nav .menu .active {
-      border-top: 3px solid #ffdb73;
+      border-top: 3px solid #ffce40;
       background-color: #ffffff1f; }
     .section_intro .mid-bar nav .menu__item {
       padding: 20px;
@@ -98,7 +115,7 @@ a {
       .section_intro .mid-bar nav .menu__item a {
         color: #ffffff; }
       .section_intro .mid-bar nav .menu__item:hover {
-        border-top: 3px solid #ffdb73; }
+        border-top: 3px solid #ffce40; }
     .section_intro .mid-bar nav .messenger-list__item {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -109,7 +126,7 @@ a {
         color: #ffffff;
         transition: .2s; }
         .section_intro .mid-bar nav .messenger-list__item i:hover {
-          color: #ffdb73; }
+          color: #ffce40; }
 
 .section_intro .carousel-area {
   background: #c0c0c0 url(../assets/carousel/1564394886_kartinki_oboi_devushka_model_poza_devushka_shatenka_vzglja.jpg);
@@ -124,7 +141,7 @@ a {
     .section_intro .carousel-area .carousel_content__subtitle {
       font-weight: 400;
       letter-spacing: .15em;
-      color: #ffdb73;
+      color: #ffce40;
       line-height: 1.15; }
     .section_intro .carousel-area .carousel_content__title {
       margin-top: 30px;
@@ -133,19 +150,6 @@ a {
       font-size: 70px;
       line-height: 1;
       color: #ffffff; }
-    .section_intro .carousel-area .carousel_content__button {
-      padding: 17px 33px;
-      font-size: 18px;
-      line-height: 1.5;
-      letter-spacing: 0.1em;
-      border: 2px solid #ffdb73;
-      background-color: #ffdb73;
-      color: #444349;
-      font-weight: 600;
-      transition: .2s; }
-      .section_intro .carousel-area .carousel_content__button:hover {
-        background-color: #ffe497;
-        border-color: #ffe497; }
 
 .section_about .area_promo {
   padding-top: 100px;
@@ -163,9 +167,27 @@ a {
   box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
   transition: all .3s ease;
   margin-bottom: 40px; }
+  .section_about .promo_box__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .section_about .promo_box__icon img {
+      width: 50px;
+      position: absolute; }
+    .section_about .promo_box__icon .figure {
+      clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
+      transform: rotate(14deg);
+      transform-origin: 100% 100%;
+      width: 70px;
+      height: 70px;
+      background-color: #ffce40;
+      transition: .3s;
+      position: relative; }
   .section_about .promo_box__title {
     font-size: 24px;
-    letter-spacing: 0.05em; }
+    letter-spacing: 0.05em;
+    transition: .3s; }
   .section_about .promo_box__decorLine {
     position: relative;
     max-width: 126px;
@@ -186,7 +208,85 @@ a {
     letter-spacing: 0.05em; }
   .section_about .promo_box:hover {
     box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4); }
-  .section_about .promo_box:hover .promo_box__decorLine::before {
-    left: 0px;
-    right: 0px;
-    background: #ffdb73; }
+    .section_about .promo_box:hover .promo_box__decorLine::before {
+      left: 0px;
+      right: 0px;
+      background: #ffce40; }
+    .section_about .promo_box:hover .promo_box__title {
+      letter-spacing: 0.1em; }
+    .section_about .promo_box:hover .figure {
+      transform: rotate(4deg); }
+
+.section_about .about_area {
+  display: flex;
+  height: 450px; }
+  .section_about .about_area__item {
+    flex: 1;
+    margin-bottom: 50px;
+    padding: 0 15px; }
+
+.section_about .preview_block {
+  position: relative; }
+  .section_about .preview_block__item {
+    position: absolute;
+    height: 94%;
+    width: 94%;
+    top: 0;
+    left: 0;
+    transition: .3s ease; }
+  .section_about .preview_block .preview_border {
+    outline: 2px solid black; }
+  .section_about .preview_block .preview_photo {
+    top: 4%;
+    left: 4%;
+    background: url(../assets/img/1574866053_telki-v-nizhnem-bele-seksi-31.jpg) no-repeat 0 0;
+    background-size: 100% 100%; }
+  .section_about .preview_block:hover .preview_border {
+    top: 4%;
+    left: 4%; }
+  .section_about .preview_block:hover .preview_photo {
+    top: 0;
+    left: 0; }
+
+.section_about .about_description {
+  margin: 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+  .section_about .about_description__title {
+    font-size: 48px;
+    line-height: 1.20833;
+    letter-spacing: 0.05em;
+    font-weight: 300; }
+  .section_about .about_description .tabs {
+    position: relative;
+    margin-bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #e1e1e1; }
+    .section_about .about_description .tabs .tab input[type="radio"] {
+      display: none; }
+    .section_about .about_description .tabs .tab :checked ~ .tab-content {
+      display: block; }
+    .section_about .about_description .tabs .tab :checked + .tab-title {
+      color: #ffce40;
+      border-bottom: 3px solid #ffce40; }
+    .section_about .about_description .tabs .tab-title {
+      color: #9b9b9b;
+      font-size: 24px;
+      padding-bottom: 10px;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: .3s; }
+      .section_about .about_description .tabs .tab-title:hover {
+        color: #ffce40; }
+    .section_about .about_description .tabs .tab-content {
+      display: none;
+      position: absolute;
+      padding: 30px 0;
+      left: 0;
+      font-family: "Verdana";
+      color: #9b9b9b;
+      line-height: 1.4; }

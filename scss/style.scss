@@ -13,8 +13,10 @@
 // ========================================================== mixins =========================
 // ---------------------------------------------------------- / mixins -----------------------
 // ========================================================== variables ======================
-$brand_main_collor: #ffdb73;
-$brand_secondary_collor: #444349;
+$brand_main_color: #ffce40;
+$brand_secondary_color: #444349;
+$brand_main_font: "Teko";
+$brand_secondary_font: "Verdana";
 // ---------------------------------------------------------- / variables --------------------
 // ========================================================== commons ========================
 .wrapper {
@@ -26,10 +28,11 @@ $brand_secondary_collor: #444349;
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 100;
 }
 
 body {
-    font-family: "Teko";
+    font-family: $brand_main_font;
 }
 
 ul {
@@ -44,6 +47,24 @@ a {
     cursor: pointer;
 }
 
+.brand_button {
+    display: inline-block;
+    padding: 17px 33px;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    border: 2px solid $brand_main_color;
+    background-color: $brand_main_color;
+    color: $brand_secondary_color;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: .2s;
+    &:hover {
+        background-color: lighten($brand_main_color, 7%);
+        border-color: lighten($brand_main_color, 7%);
+    }
+}
+
 // ---------------------------------------------------------- / commons ----------------------
 // ========================================================== intro ==========================
 .section_intro {
@@ -55,8 +76,8 @@ a {
             display: flex;
             align-items: center;
             font-size: 40px;
-            color: $brand_secondary_collor;
-            border-bottom: 2px solid $brand_main_collor;
+            color: $brand_secondary_color;
+            border-bottom: 2px solid $brand_main_color;
         }
         &__right_panel {
             display: flex;
@@ -75,7 +96,7 @@ a {
                     font-weight: 400;
                     letter-spacing: .075em;
                     i {
-                        color: $brand_main_collor;
+                        color: $brand_main_color;
                         margin-right: 12px;
                         font-size: 20px;
                     }
@@ -88,7 +109,7 @@ a {
                 .phone_number a {
                     transition: .2s;
                     &:hover {
-                        color: $brand_main_collor;
+                        color: $brand_main_color;
                     }
                 }
             }
@@ -101,8 +122,8 @@ a {
                 margin-left: 42px;
                 transition: .2s;
                 &:hover {
-                    background-color: $brand_main_collor;
-                    border-color: $brand_main_collor;
+                    background-color: $brand_main_color;
+                    border-color: $brand_main_color;
                     color: #ffffff;
                     font-weight: 600;
                 }
@@ -110,7 +131,7 @@ a {
         }
     }
     .mid-bar {
-        background-color: $brand_secondary_collor;
+        background-color: $brand_secondary_color;
         nav {
             display: flex;
             justify-content: space-between;
@@ -120,7 +141,7 @@ a {
             }
             .menu {
                 .active {
-                    border-top: 3px solid $brand_main_collor;
+                    border-top: 3px solid $brand_main_color;
                     background-color: #ffffff1f;
                 }
                 &__item {
@@ -128,13 +149,13 @@ a {
                     font-size: 18px;
                     letter-spacing: .05em;
                     text-transform: uppercase;
-                    border-top: 3px solid $brand_secondary_collor;
+                    border-top: 3px solid $brand_secondary_color;
                     transition: .2s;
                     a {
                         color: #ffffff;
                     }
                     &:hover {
-                        border-top: 3px solid $brand_main_collor;
+                        border-top: 3px solid $brand_main_color;
                     }
                 }
             }
@@ -150,7 +171,7 @@ a {
                         color: #ffffff;
                         transition: .2s;
                         &:hover {
-                            color: $brand_main_collor;
+                            color: $brand_main_color;
                         }
                     }
                 }
@@ -170,7 +191,7 @@ a {
             &__subtitle {
                 font-weight: 400;
                 letter-spacing: .15em;
-                color: $brand_main_collor;
+                color: $brand_main_color;
                 line-height: 1.15;
             }
             &__title {
@@ -180,21 +201,6 @@ a {
                 font-size: 70px;
                 line-height: 1;
                 color: #ffffff;
-            }
-            &__button {
-                padding: 17px 33px;
-                font-size: 18px;
-                line-height: 1.5;
-                letter-spacing: 0.1em;
-                border: 2px solid $brand_main_collor;
-                background-color: $brand_main_collor;
-                color: $brand_secondary_collor;
-                font-weight: 600;
-                transition: .2s;
-                &:hover {
-                    background-color: lighten($brand_main_collor, 7%);
-                    border-color: lighten($brand_main_collor, 7%);
-                }
             }
         }
     }
@@ -219,10 +225,30 @@ a {
         box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
         transition: all .3s ease;
         margin-bottom: 40px;
-        &__icon {}
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            img {
+                width: 50px;
+                position: absolute;
+            }
+            .figure {
+                clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
+                transform: rotate(14deg);
+                transform-origin: 100% 100%;
+                width: 70px;
+                height: 70px;
+                background-color: $brand_main_color;
+                transition: .3s;
+                position: relative;
+            }
+        }
         &__title {
             font-size: 24px;
             letter-spacing: 0.05em;
+            transition: .3s;
         }
         &__decorLine {
             position: relative;
@@ -242,16 +268,112 @@ a {
         }
         &__description {
             font-size: 14px;
-            font-family: "Verdana", "sans-serif";
+            font-family: $brand_secondary_font, "sans-serif";
             letter-spacing: 0.05em;
         }
         &:hover {
             box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
+            .promo_box__decorLine::before {
+                left: 0px;
+                right: 0px;
+                background: $brand_main_color;
+            }
+            .promo_box__title {
+                letter-spacing: 0.1em;
+            }
+            .figure {
+                transform: rotate(4deg);
+            }
         }
-        &:hover .promo_box__decorLine::before {
-            left: 0px;
-            right: 0px;
-            background: $brand_main_collor;
+    }
+    .about_area {
+        display: flex;
+        height: 450px;
+        &__item {
+            flex: 1;
+            margin-bottom: 50px;
+            padding: 0 15px;
+        }
+    }
+    .preview_block {
+        position: relative;
+        &__item {
+            position: absolute;
+            height: 94%;
+            width: 94%;
+            top: 0;
+            left: 0;
+            transition: .3s ease;
+        }
+        .preview_border {
+            outline: 2px solid black;
+        }
+        .preview_photo {
+            top: 4%;
+            left: 4%;
+            background: url(../assets/img/1574866053_telki-v-nizhnem-bele-seksi-31.jpg) no-repeat 0 0;
+            background-size: 100% 100%;
+        }
+        &:hover {
+            .preview_border {
+                top: 4%;
+                left: 4%;
+            }
+            .preview_photo {
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .about_description {
+        margin: 0 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        &__title {
+            font-size: 48px;
+            line-height: 1.20833;
+            letter-spacing: 0.05em;
+            font-weight: 300;
+        }
+        .tabs {
+            position: relative;
+            margin-bottom: 130px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #e1e1e1;
+            .tab input[type="radio"] {
+                display: none;
+            }
+            .tab :checked~.tab-content {
+                display: block;
+            }
+            .tab :checked+.tab-title {
+                color: $brand_main_color;
+                border-bottom: 3px solid $brand_main_color;
+            }
+            .tab-title {
+                color: #9b9b9b;
+                font-size: 24px;
+                padding-bottom: 10px;
+                letter-spacing: 0.1em;
+                cursor: pointer;
+                transition: .3s;
+                &:hover {
+                    color: $brand_main_color;
+                }
+            }
+            .tab-content {
+                display: none;
+                position: absolute;
+                padding: 30px 0;
+                left: 0;
+                font-family: $brand_secondary_font;
+                color: #9b9b9b;
+                line-height: 1.4;
+            }
         }
     }
 }
