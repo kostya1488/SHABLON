@@ -6,28 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sweet girls</title>
 
-
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
-
     <!-- fonts -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
-    <!-- / fonts -->
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- / jQuery -->
-
 </head>
 
 <body>
     <!-- ------------------------------------------------------------------------------------ common ---------------------------------------- -->
     <!-- back to top batton -->
     <a id="btn_to_top" title="Go to top"><i class="fas fa-arrow-up"></i></a>
-    <!-- / back to top batton -->
     <!-- modal anketa -->
-
-    <!-- / modal anketa -->
+    <div class='modal' id='modal1'>
+        <div class='content'>
+            <h1 class='title'>This is a modal</h1>
+            <p>
+                Here is some text and stuff. cool cool
+            </p>
+            <a class='btn close-modal' data-modal="#modal1" href="#">K Bye</a>
+        </div>
+    </div>
     <!-- ==================================================================================== / common ====================================== -->
     <!-- ------------------------------------------------------------------------------------ intro ----------------------------------------- -->
 
@@ -41,7 +41,7 @@
                     <li class="work_hours"><i class="far fa-clock"></i>c 09:00 до 21:00</li>
                     <li class="phone_number"><i class="fas fa-phone-alt"></i><a href="tel:+380996661488">+38 (099) 666-14-88</a></li>
                 </ul>
-                <a href="#openModal" class="brand_secondary_button">ЗАПОЛНИТЬ АНКЕТУ</a>
+                <a href="#" class="brand_secondary_button open-modal" data-modal="#modal1">ЗАПОЛНИТЬ АНКЕТУ</a>
             </div>
         </div>
         <header id="header" class="mid-bar">
@@ -63,7 +63,7 @@
                         <a class="some_link" href="#contacts">Контакты</a>
                     </li>
                     <li class="menu__item">
-                        <a class="" href="#openModal">Анкета</a>
+                        <a class="open-modal" data-modal="#modal1" href="#">Анкета</a>
                     </li>
                 </ul>
                 <ul class="messenger-list">
@@ -86,7 +86,7 @@
             <div class="carousel_content">
                 <div class="carousel_content__subtitle">Lorem ipsum dolor sit amet.</div>
                 <div class="carousel_content__title">Lorem ipsum dolor sit amet consectetur.</div>
-                <a class="brand_main_button" href="#openModal">Заполнить анкету</a>
+                <a class="brand_main_button open-modal" data-modal="#modal1" href="#">Заполнить анкету</a>
             </div>
         </div>
     </section>
@@ -151,8 +151,8 @@
                         </div>
                     </div>
                     <div>
-                        <a href="#openModal">
-                            <div class="brand_main_button">заполнить анкету</div>
+                        <a href="#">
+                            <div class="brand_main_button open-modal" data-modal="#modal1">заполнить анкету</div>
                         </a>
                     </div>
                 </div>
@@ -264,10 +264,10 @@
                         <a href="#contacts">Контакты</a>
                     </li>
                     <li class="quick_links_list__item">
-                        <a href="#openModal">Анкета</a>
+                        <a class="open-modal" data-modal="#modal1" href="#">Анкета</a>
                     </li>
                 </ul>
-                <a class="brand_secondary_button contacts_block__button" id="myBtn" href="#openModal">заполнить анкету</a>
+                <a class="brand_secondary_button contacts_block__button open-modal" data-modal="#modal1" id="myBtn" href="#">заполнить анкету</a>
             </div>
         </div>
     </section>
@@ -284,6 +284,7 @@
         <div class="footer__text">© 2020 Visit Hostel. All rights reserved</div>
     </footer>
     <!-- ==================================================================================== / footer ====================================== -->
+
     <script src="js/script.js "></script>
 </body>
 
