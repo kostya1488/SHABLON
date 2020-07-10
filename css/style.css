@@ -27,15 +27,18 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #000;
   cursor: pointer; }
 
 section {
   padding-bottom: 80px; }
 
 .section_title {
+  text-align: center;
   font-size: 48px;
-  line-height: 1.20833; }
+  line-height: 1.20833;
+  margin-bottom: 50px;
+  text-transform: uppercase; }
 
 .brand_main_button {
   display: inline-block;
@@ -46,13 +49,11 @@ section {
   letter-spacing: 0.1em;
   border: 2px solid #ffce40;
   background-color: #ffce40;
-  color: #444349;
-  font-weight: 600;
+  color: #000;
   text-transform: uppercase;
-  transition: .2s; }
+  transition: .1s; }
   .brand_main_button:hover {
-    background-color: #ffd764;
-    border-color: #ffd764; }
+    transform: scale(1.04); }
 
 .brand_secondary_button {
   display: inline-block;
@@ -62,14 +63,13 @@ section {
   line-height: 1.5;
   letter-spacing: 0.08em;
   border: 2px solid #151515;
-  transition: .2s;
+  transition: .1s;
   text-transform: uppercase;
   min-width: 100px; }
   .brand_secondary_button:hover {
     background-color: #ffce40;
     border-color: #ffce40;
-    color: #ffffff;
-    font-weight: 600; }
+    color: #000; }
 
 .section_intro .top-bar {
   padding: 15px 0;
@@ -156,7 +156,7 @@ section {
     .section_intro .carousel-area .carousel_content__subtitle {
       font-weight: 400;
       letter-spacing: .15em;
-      color: #ffce40;
+      color: #000;
       line-height: 1.15; }
     .section_intro .carousel-area .carousel_content__title {
       margin-top: 30px;
@@ -308,17 +308,15 @@ section {
       font-size: 14px;
       line-height: 1.4; }
 
-.section_vacancy .section_title {
-  text-align: center; }
-
 .section_vacancy .vacancy_item {
   display: flex;
   height: 336px;
   border: 1px solid #e1e1e1;
-  margin-bottom: 50px;
-  margin-top: 50px; }
+  margin-bottom: 50px; }
   .section_vacancy .vacancy_item:hover .photo {
     transform: scale(1); }
+  .section_vacancy .vacancy_item:hover .content_outner_wrap::before {
+    transform: scale(1.2); }
 
 .section_vacancy .vac_1 .photo {
   background: url(../assets/img/anastasiia-liiman-nastia-devushka-poza-krasnoe-plate-plate-d.jpg) no-repeat center center;
@@ -346,7 +344,8 @@ section {
   flex: 1;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .section_vacancy .content_outner_wrap::before {
     content: '';
     position: absolute;
@@ -358,7 +357,8 @@ section {
     font-size: 1.5em;
     letter-spacing: .025em;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 0 70%);
-    background-color: #ffce40; }
+    background-color: #ffce40;
+    transition: .3s; }
 
 .section_vacancy .content_block {
   padding: 30px 80px; }
@@ -375,3 +375,86 @@ section {
     line-height: 1.4em;
     font-size: 14px;
     margin: 25px 0 30px; }
+
+.section_gallery {
+  padding-left: 80px;
+  padding-right: 80px; }
+  .section_gallery .gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 8vw);
+    grid-gap: 20px; }
+    .section_gallery .gallery__item {
+      overflow: hidden; }
+      .section_gallery .gallery__item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .3s;
+        transform: scale(1.1); }
+      .section_gallery .gallery__item:hover img {
+        transform: scale(1); }
+    .section_gallery .gallery__item-1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    .section_gallery .gallery__item-2 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    .section_gallery .gallery__item-3 {
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 1;
+      grid-row-end: 5; }
+    .section_gallery .gallery__item-4 {
+      grid-column-start: 7;
+      grid-column-end: 9;
+      grid-row-start: 1;
+      grid-row-end: 3; }
+    .section_gallery .gallery__item-5 {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row-start: 3;
+      grid-row-end: 5; }
+    .section_gallery .gallery__item-6 {
+      grid-column-start: 7;
+      grid-column-end: 9;
+      grid-row-start: 3;
+      grid-row-end: 5; }
+
+.section_contacts {
+  padding-top: 80px;
+  background-color: #444349; }
+  .section_contacts__wrap {
+    display: flex;
+    justify-content: space-around; }
+  .section_contacts .contacts_block__title {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .1em;
+    font-size: 24px; }
+  .section_contacts .contacts_block ul {
+    margin-top: 20px; }
+    .section_contacts .contacts_block ul li {
+      line-height: 34px; }
+    .section_contacts .contacts_block ul i {
+      min-width: 18px;
+      margin-right: 20px;
+      color: #ffce40; }
+    .section_contacts .contacts_block ul a {
+      color: #9b9b9b;
+      font-family: "Verdana";
+      letter-spacing: 0.05em;
+      transition: .3s; }
+      .section_contacts .contacts_block ul a:hover {
+        color: #ffce40; }
+  .section_contacts .contacts_block .quick_links_list li::before {
+    position: relative;
+    top: 0.13em;
+    content: "•";
+    color: #ffce40;
+    margin-right: 20px;
+    font-size: 30px; }
