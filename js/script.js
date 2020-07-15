@@ -43,7 +43,7 @@ $(function() {
     $("#btn_to_top").scrollToTop();
 });
 // ======================================================== / BUTTON scroll to top =================================
-// -------------------------------------------------------- modal anketa -------------------------------------------
+// -------------------------------------------------------- show/hide modal anketa -------------------------------------------
 
 $(".modal").each(function() {
     $(this).wrap('<div class="overlay"></div>')
@@ -90,4 +90,28 @@ $(".close-modal").on('click', function(e) {
     }, 350);
 
 });
-// ======================================================== modal anketa ===========================================
+// ======================================================== show/hide modal anketa ===========================================
+// -------------------------------------------------------- send callback form -------------------------------------------
+
+// function ajaxFormRequest(form_id, form_area_id) {
+function ajaxFormRequest(form_id) {
+
+    var forma = $("#" + form_id);
+    // var form_area = $("#" + form_area_id);
+    // var resp_text = $('#area_after_form_send');
+
+    forma.submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "php/callback.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(".modal").removeClass("open");
+            setTimeout(function() {
+                $(".modal").parents(".overlay").removeClass("open");
+            }, 350);
+        });
+        return false;
+    })
+}
+// ======================================================== / send callback form ===========================================
