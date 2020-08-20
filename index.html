@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sweet girls</title>
+    <title>yellow site</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
@@ -46,58 +46,71 @@
 
     <!-- ==================================================================================== / common ====================================== -->
     <!-- ------------------------------------------------------------------------------------ intro ----------------------------------------- -->
-
     <section id="intro" class="section_intro">
+
         <div class="top-bar wrapper">
-            <div class="top-bar__logo">
-                <div>SWEETgirls</div>
+            <div class="logo">
+                SWEETgirls
             </div>
-            <div class="top-bar__right_panel">
+            <div id="right_panel_button">
+                <div class="circle c_top"></div>
+                <div class="circle c_mid"></div>
+                <div class="circle c_bot"></div>
+            </div>
+            <div class="right_panel">
                 <ul class="contacts_list">
                     <li class="work_hours"><i class="far fa-clock"></i>c 09:00 до 21:00</li>
-                    <li class="phone_number"><i class="fas fa-phone-alt"></i><a href="tel:+380996661488">+38 (099) 666-14-88</a></li>
+                    <li class="phone_number"><i class="fas fa-phone-alt"></i><a href="tel:+380996661488">(099) 666-14-88</a></li>
                 </ul>
                 <a href="#" class="brand_secondary_button open-modal" data-modal="#modal1">перезвонить мне</a>
             </div>
         </div>
-        <header id="header" class="mid-bar">
-            <nav class="wrapper">
-                <ul class="menu">
-                    <li class="menu__item active">
-                        <a class="some_link" href="#">Главная</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="some_link" href="#about">Об агентстве</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="some_link" href="#vacancy">Вакансии</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="some_link" href="#our_gallery">Галерея</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="some_link" href="#contacts">Контакты</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="open-modal" data-modal="#modal1" href="#">Анкета</a>
-                    </li>
-                </ul>
-                <ul class="messenger-list">
-                    <li class="messenger-list__item">
-                        <a href=""><i class="fab fa-telegram-plane"></i></a>
-                    </li>
-                    <li class="messenger-list__item">
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                    </li>
-                    <li class="messenger-list__item">
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li class="messenger-list__item">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                    </li>
-                </ul>
-            </nav>
+        <header id="header" class="header">
+            <div class="wrapper">
+                <div id="toggle_button">
+                    <span class="b_top"></span>
+                    <span class="b_mid"></span>
+                    <span class="b_bot"></span>
+                </div>
+                <nav id="menu_box">
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <a class="nav_link active" href="#intro">Главная</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="nav_link" href="#about">Об агентстве</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="nav_link" href="#vacancy">Вакансии</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="nav_link" href="#our_gallery">Галерея</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="nav_link" href="#contacts">Контакты</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="open-modal nav_link" data-modal="#modal1" href="#">Анкета</a>
+                        </li>
+                    </ul>
+                    <ul class="messenger-list">
+                        <li class="list_item">
+                            <a href=""><i class="fab fa-telegram-plane"></i></a>
+                        </li>
+                        <li class="list_item">
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="list_item">
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li class="list_item">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
+
         <div class="carousel-area">
             <div class="carousel_content">
                 <div class="carousel_content__subtitle">Lorem ipsum dolor sit amet.</div>
@@ -106,6 +119,7 @@
             </div>
         </div>
     </section>
+
     <!-- =================================================================================== / intro ===================================== -->
     <!-- ----------------------------------------------------------------------------------- about --------------------------------------- -->
 
@@ -179,29 +193,31 @@
     <!-- ------------------------------------------------------------------------------------- vacancy ----------------------------------- -->
     <section id="vacancy" class="section_vacancy wrapper">
         <div class="section_title">Lorem, ipsum dolor.</div>
-        <div class="vacancy_item vac_1">
-            <a class="photo_block">
-                <div class="photo"></div>
-            </a>
-            <div class="content_outner_wrap">
+        <div class="vacancy_item">
+            <div class="photo_block">
+                <img src="assets/model.jpg" alt="">
+            </div>
+            <div class="text_box_wrap">
                 <div class="content_block">
                     <div class="content_block__title"><a href="">Lorem ipsum (dolor sit).</a></div>
                     <div class="content_block__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, delectus. Eos obcaecati a necessitatibus perspiciatis tempore id, sint, autem nulla, corporis voluptatum </div>
                     <a href="#" class="brand_secondary_button">подробнее</a>
                 </div>
             </div>
+            <div class="price_label">100 000 грн</div>
         </div>
-        <div class="vacancy_item vac_2">
-            <a class="photo_block">
-                <div class="photo"></div>
-            </a>
-            <div class="content_outner_wrap">
+        <div class="vacancy_item">
+            <div class="photo_block">
+                <img src="assets/admin.jpg" alt="">
+            </div>
+            <div class="text_box_wrap">
                 <div class="content_block">
                     <div class="content_block__title"><a href="">Lorem ipsum (dolor sit).</a></div>
                     <div class="content_block__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, delectus. Eos obcaecati a necessitatibus perspiciatis tempore id, sint, autem nulla, corporis voluptatum </div>
                     <a href="#" class="brand_secondary_button">подробнее</a>
                 </div>
             </div>
+            <div class="price_label">20 000 грн</div>
         </div>
     </section>
     <!-- ===================================================================================== / vacancy =================================== -->
@@ -227,7 +243,6 @@
             <div class="gallery__item gallery__item-6">
                 <img src="assets/gallery/6.jpg" class="gallery__img" alt="Image 6">
             </div>
-
         </div>
 
 
