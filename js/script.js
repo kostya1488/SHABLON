@@ -37,12 +37,12 @@ function toggleClass(elem, class_name) {
 
 // -------------------------------------------------------- scroll to section -------------------------------------
 
-$('.nav_link').on('click', function(e) {
+$('.menu_link').on('click', function(e) {
     $('html,body').stop().animate({ scrollTop: $($(this).attr('href')).offset().top }, 1200);
     e.preventDefault();
 
     if (!$(this).hasClass('active')) {
-        $('.nav_link').removeClass('active');
+        $('.menu_link').removeClass('active');
 
         $(this).addClass('active');
     }
@@ -126,25 +126,4 @@ $(".close-modal").on('click', function(e) {
 // ======================================================== show/hide modal anketa ===========================================
 // -------------------------------------------------------- send callback form -------------------------------------------
 
-// function ajaxFormRequest(form_id, form_area_id) {
-function ajaxFormRequest(form_id) {
-
-    var forma = $("#" + form_id);
-    // var form_area = $("#" + form_area_id);
-    // var resp_text = $('#area_after_form_send');
-
-    forma.submit(function() {
-        $.ajax({
-            type: "POST",
-            url: "php/callback.php",
-            data: $(this).serialize()
-        }).done(function() {
-            $(".modal").removeClass("open");
-            setTimeout(function() {
-                $(".modal").parents(".overlay").removeClass("open");
-            }, 350);
-        });
-        return false;
-    })
-}
 // ======================================================== / send callback form ===========================================

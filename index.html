@@ -22,24 +22,22 @@
     <!-- / back to top batton -->
 
     <!-- modal anketa -->
-    <div class='modal' id='modal1'>
-        <div class='content'>
-            <div class='modal_title'>Заказать звонок</div>
+    <div class="modal" id="modal1">
+        <div class="content">
+            <div class="modal_title">Заказать звонок</div>
             <div class="modal_description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, et. Optio consectetur repellendus deserunt eveniet asperiores illum maiores obcaecati ratione sit pariatur.
             </div>
             <div class="modal_forma">
                 <form id="callback_forma">
-                    <input type="text" name="name" placeholder="Имя">
-                    <input type="tel" name="tel" placeholder="Телефон">
-                    <button onclick="ajaxFormRequest('callback_forma')">Заказать звонок</button>
-                    <a class='btn close-modal' data-modal="#modal1" href="#">Закрыть</a>
+                    <input class="input" type="text" name="name" placeholder="Имя">
+                    <input class="input" type="tel" name="tel" placeholder="Телефон">
+                    <div class="button_wrap">
+                        <a class='close-modal' data-modal="#modal1" href="#">Отмена</a>
+                        <button>Заказать звонок</button>
+                    </div>
                 </form>
             </div>
-
-
-
-
         </div>
     </div>
     <!-- / modal anketa -->
@@ -75,22 +73,22 @@
                 <nav id="menu_box">
                     <ul class="menu">
                         <li class="menu__item">
-                            <a class="nav_link active" href="#intro">Главная</a>
+                            <a class="nav_link menu_link active" href="#intro">Главная</a>
                         </li>
                         <li class="menu__item">
-                            <a class="nav_link" href="#about">Об агентстве</a>
+                            <a class="nav_link menu_link" href="#about">Об агентстве</a>
                         </li>
                         <li class="menu__item">
-                            <a class="nav_link" href="#vacancy">Вакансии</a>
+                            <a class="nav_link menu_link" href="#vacancy">Вакансии</a>
                         </li>
                         <li class="menu__item">
-                            <a class="nav_link" href="#our_gallery">Галерея</a>
+                            <a class="nav_link menu_link" href="#our_gallery">Галерея</a>
                         </li>
                         <li class="menu__item">
-                            <a class="nav_link" href="#contacts">Контакты</a>
+                            <a class="nav_link menu_link" href="#contacts">Контакты</a>
                         </li>
                         <li class="menu__item">
-                            <a class="open-modal nav_link" data-modal="#modal1" href="#">Анкета</a>
+                            <a class="open-modal nav_link" data-modal="#modal1">Анкета</a>
                         </li>
                     </ul>
                     <ul class="messenger-list">
