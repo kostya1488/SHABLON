@@ -143,7 +143,7 @@ section {
         margin-bottom: 50px;
         text-transform: uppercase;
     }
-    .wrapper {
+    .wrapper_mob {
         margin: 0 auto;
         max-width: 576px;
         width: 100%;
@@ -280,8 +280,13 @@ section {
             }
         }
     }
+    @media (min-width: $screen_lg) and (max-width: $screen_lg_max) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     @media (min-width: $screen_lg) {
-        padding: 15px 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
         display: flex;
         top: 0;
         justify-content: space-between;
@@ -391,6 +396,8 @@ section {
 }
 
 header {
+    padding-left: 20px;
+    padding-right: 23px;
     .messenger-list {
         li+li {
             padding-left: 20px;
@@ -574,6 +581,8 @@ header {
 // ========================================================== / intro ======================
 // ---------------------------------------------------------- about ------------------------
 .section_about {
+    padding-left: 20px;
+    padding-right: 20px;
     .area_promo {
         display: flex;
     }
@@ -726,7 +735,7 @@ header {
             .tab-content {
                 display: none;
                 position: absolute;
-                padding: 30px 0;
+                padding: 30px;
                 left: 0;
                 font-family: $brand_secondary_font;
                 color: $secondary_text_color;
@@ -740,7 +749,7 @@ header {
             margin: 0 50px;
         }
         .about_area__item {
-            max-height: 450px;
+            height: 450px;
             padding: 0 15px;
             margin-bottom: 50px;
         }
@@ -751,11 +760,13 @@ header {
             margin-left: 30px;
         }
     }
-    @media (max-width: $screen_md_max) {
+    @media (min-width: $screen_sm) {
         .about_area__item {
-            min-height: 250px;
-            margin-top: 50px;
+            min-height: 400px;
+            margin-bottom: 50px;
         }
+    }
+    @media (max-width: $screen_md_max) {
         .area_promo {
             flex-direction: column;
             align-items: center;
@@ -765,6 +776,10 @@ header {
         }
     }
     @media (max-width: $screen_xs_max) {
+        .about_area__item {
+            min-height: 250px;
+            margin-top: 50px;
+        }
         padding: 120px 20px 60px;
     }
 }
@@ -772,6 +787,8 @@ header {
 // ========================================================== / about ======================
 // ---------------------------------------------------------- vacancy ----------------------
 .section_vacancy {
+    padding-left: 20px;
+    padding-right: 20px;
     .vacancy_item {
         display: flex;
         position: relative;
