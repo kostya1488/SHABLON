@@ -143,6 +143,11 @@ section {
         margin-bottom: 50px;
         text-transform: uppercase;
     }
+    .wrapper {
+        margin: 0 auto;
+        max-width: 576px;
+        width: 100%;
+    }
 }
 
 // ========================================================== / commons ==================
@@ -172,10 +177,11 @@ section {
     opacity: 0;
     pointer-events: none;
     transition: 0.35s ease-in-out;
-    padding: 40px 20px;
-    width: 40%;
+    padding: 50px 20px;
+    max-width: 576px;
     text-align: center;
     color: $brand_secondary_color;
+    margin: 0 15px;
     &.open {
         opacity: 1;
         pointer-events: inherit;
@@ -194,7 +200,7 @@ section {
             text-transform: uppercase;
         }
         .modal_description {
-            font-size: 14px;
+            font-size: 18px;
             font-family: $brand_secondary_font;
             margin-top: 10px;
             margin-bottom: 30px;
@@ -210,7 +216,7 @@ section {
             letter-spacing: 1px;
             border: 1px solid $brand_secondary_color;
             // background: $brand_secondary_color;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         .button_wrap {
             display: flex;
@@ -272,6 +278,7 @@ section {
     @media (min-width: $screen_lg) {
         padding: 15px 0;
         display: flex;
+        top: 0;
         justify-content: space-between;
         .right_panel {
             display: flex;
@@ -295,6 +302,7 @@ section {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
         background: #ffffff;
         position: fixed;
+        width: 100%;
         z-index: 100;
         .logo {
             text-align: center;
@@ -561,8 +569,6 @@ header {
 // ========================================================== / intro ======================
 // ---------------------------------------------------------- about ------------------------
 .section_about {
-    padding-left: 20px;
-    padding-right: 20px;
     .area_promo {
         display: flex;
     }
@@ -747,10 +753,15 @@ header {
         }
         .area_promo {
             flex-direction: column;
+            align-items: center;
         }
         .about_area {
             flex-direction: column;
         }
+    }
+    @media (max-width: $screen_xs_max) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -834,8 +845,6 @@ header {
         }
     }
     @media (max-width: $screen_md_max) {
-        padding-left: 20px;
-        padding-right: 20px;
         .vacancy_item {
             flex-direction: column;
             margin-top: 50px;
@@ -848,6 +857,10 @@ header {
         .content_block {
             padding-top: 30px;
         }
+    }
+    @media (max-width: $screen_xs_max) {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -935,11 +948,12 @@ header {
 // ========================================================== / gallery ====================
 // ---------------------------------------------------------- contacts ---------------------
 .section_contacts {
-    padding: 80px 20px 50px;
     background-color: lighten($brand_secondary_color, 10%);
     &__wrap {
         display: flex;
         justify-content: space-around;
+        padding-right: 20px;
+        padding-left: 20px;
     }
     .contacts_block {
         &__title {
@@ -949,7 +963,7 @@ header {
             font-size: 24px;
         }
         &__button {
-            margin-top: 34px;
+            margin-top: 60px;
             color: #fff;
             border-color: #fff;
             transition: .3s;
@@ -997,11 +1011,12 @@ header {
         }
     }
     @media (max-width: $screen_md_max) {
+        padding-bottom: 0;
         &__wrap {
             flex-direction: column;
         }
         .contacts_block {
-            margin-bottom: 30px;
+            margin-bottom: 60px;
             text-align: center;
             ul {
                 text-align: left;
@@ -1014,7 +1029,7 @@ header {
 // ---------------------------------------------------------- footer -------------------------
 .footer {
     background-color: $brand_secondary_color;
-    padding: 30px 0;
+    padding: 60px 0;
     text-align: center;
     &__text {
         font-family: $brand_secondary_font;

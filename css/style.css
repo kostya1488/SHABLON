@@ -101,7 +101,11 @@ section {
     font-size: 36px;
     line-height: 1.20833;
     margin-bottom: 50px;
-    text-transform: uppercase; } }
+    text-transform: uppercase; }
+  .wrapper {
+    margin: 0 auto;
+    max-width: 576px;
+    width: 100%; } }
 
 .overlay {
   width: 100%;
@@ -126,10 +130,11 @@ section {
   opacity: 0;
   pointer-events: none;
   transition: 0.35s ease-in-out;
-  padding: 40px 20px;
-  width: 40%;
+  padding: 50px 20px;
+  max-width: 576px;
   text-align: center;
-  color: #444349; }
+  color: #444349;
+  margin: 0 15px; }
   .modal.open {
     opacity: 1;
     pointer-events: inherit; }
@@ -145,7 +150,7 @@ section {
       line-height: 1.20833;
       text-transform: uppercase; }
     .modal .content .modal_description {
-      font-size: 14px;
+      font-size: 18px;
       font-family: "Verdana";
       margin-top: 10px;
       margin-bottom: 30px; }
@@ -158,7 +163,7 @@ section {
       padding: 15px;
       letter-spacing: 1px;
       border: 1px solid #444349;
-      margin-bottom: 20px; }
+      margin-bottom: 30px; }
     .modal #callback_forma .button_wrap {
       display: flex;
       justify-content: flex-end; }
@@ -206,6 +211,7 @@ section {
   .top-bar {
     padding: 15px 0;
     display: flex;
+    top: 0;
     justify-content: space-between; }
     .top-bar .right_panel {
       display: flex; }
@@ -226,6 +232,7 @@ section {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     background: #ffffff;
     position: fixed;
+    width: 100%;
     z-index: 100; }
     .top-bar .logo {
       text-align: center;
@@ -434,157 +441,166 @@ header #check {
     .section_intro .carousel_content__title {
       text-shadow: 0 0 1em #552c1b; } }
 
-.section_about {
-  padding-left: 20px;
-  padding-right: 20px; }
-  .section_about .area_promo {
-    display: flex; }
-  .section_about .promo_box {
-    text-align: center;
-    max-width: 370px;
-    padding: 66px 15px 50px;
-    background: #ffffff;
-    box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
-    transition: all .3s ease;
-    margin-bottom: 40px; }
-    .section_about .promo_box__icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative; }
-      .section_about .promo_box__icon img {
-        width: 50px;
-        position: absolute; }
-      .section_about .promo_box__icon .figure {
-        clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
-        transform: rotate(14deg);
-        transform-origin: 100% 100%;
-        width: 70px;
-        height: 70px;
-        background-color: #ffce40;
-        transition: .3s;
-        position: relative; }
-    .section_about .promo_box__title {
-      font-size: 24px;
-      letter-spacing: 0.05em;
-      transition: .3s; }
-    .section_about .promo_box__decorLine {
-      position: relative;
-      max-width: 126px;
-      width: 100px;
-      height: 2px;
-      margin: 20px auto 22px; }
-      .section_about .promo_box__decorLine::before {
-        position: absolute;
-        content: '';
-        height: 100%;
-        left: 15px;
-        right: 15px;
-        background: #d7d7d7;
-        transition: all .3s ease; }
-    .section_about .promo_box__description {
-      font-size: 14px;
-      font-family: "Verdana", "sans-serif";
-      letter-spacing: 0.05em; }
-    .section_about .promo_box:hover {
-      box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
-      transform: scale(1.02); }
-      .section_about .promo_box:hover .promo_box__decorLine::before {
-        left: 0px;
-        right: 0px;
-        background: #ffce40; }
-      .section_about .promo_box:hover .promo_box__title {
-        letter-spacing: 0.1em; }
-      .section_about .promo_box:hover .figure {
-        transform: rotate(4deg); }
-  .section_about .about_area {
-    display: flex; }
-    .section_about .about_area__item {
-      flex: 1; }
-  .section_about .preview_block {
-    position: relative; }
-    .section_about .preview_block__item {
-      position: absolute;
-      height: 95%;
-      width: 95%;
-      top: 0;
-      left: 0;
-      transition: .3s ease; }
-    .section_about .preview_block .preview_border {
-      outline: 2px solid black; }
-    .section_about .preview_block .preview_photo {
-      top: 5%;
-      left: 5%;
-      background: url(../assets/1574866053_telki-v-nizhnem-bele-seksi-31.jpg) no-repeat 0 0;
-      background-size: 100% 100%; }
-    .section_about .preview_block:hover .preview_border {
-      top: 5%;
-      left: 5%; }
-    .section_about .preview_block:hover .preview_photo {
-      top: 0;
-      left: 0; }
-  .section_about .about_description {
+.section_about .area_promo {
+  display: flex; }
+
+.section_about .promo_box {
+  text-align: center;
+  max-width: 370px;
+  padding: 66px 15px 50px;
+  background: #ffffff;
+  box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.17);
+  transition: all .3s ease;
+  margin-bottom: 40px; }
+  .section_about .promo_box__icon {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 100%; }
-    .section_about .about_description__title {
-      font-size: 36px;
-      line-height: 1.20833;
-      letter-spacing: 0.05em;
-      font-weight: 300;
-      margin-bottom: 15px; }
-    .section_about .about_description .tabs {
-      position: relative;
-      margin-bottom: 130px;
-      display: flex;
-      justify-content: space-between;
-      padding-bottom: 8px;
-      border-bottom: 3px solid #e1e1e1; }
-      .section_about .about_description .tabs .tab input[type="radio"] {
-        display: none; }
-      .section_about .about_description .tabs .tab :checked ~ .tab-content {
-        display: block; }
-      .section_about .about_description .tabs .tab :checked + .tab-title {
-        color: #ffce40;
-        border-bottom: 3px solid #ffce40; }
-      .section_about .about_description .tabs .tab-title {
-        color: #9b9b9b;
-        font-size: 24px;
-        padding-bottom: 10px;
-        letter-spacing: 0.1em;
-        cursor: pointer;
-        transition: .3s; }
-        .section_about .about_description .tabs .tab-title:hover {
-          color: #ffce40; }
-      .section_about .about_description .tabs .tab-content {
-        display: none;
-        position: absolute;
-        padding: 30px 0;
-        left: 0;
-        font-family: "Verdana";
-        color: #9b9b9b;
-        font-size: 14px;
-        line-height: 1.4; }
-  @media (min-width: 992px) {
-    .section_about .about_description {
-      margin: 0 50px; }
-    .section_about .about_area__item {
-      max-height: 450px;
-      padding: 0 15px;
-      margin-bottom: 50px; }
-    .section_about .area_promo {
-      padding: 100px; }
-    .section_about .promo_box + .promo_box {
-      margin-left: 30px; } }
-  @media (max-width: 991px) {
-    .section_about .about_area__item {
-      min-height: 250px;
-      margin-top: 50px; }
-    .section_about .area_promo {
-      flex-direction: column; }
-    .section_about .about_area {
-      flex-direction: column; } }
+    align-items: center;
+    position: relative; }
+    .section_about .promo_box__icon img {
+      width: 50px;
+      position: absolute; }
+    .section_about .promo_box__icon .figure {
+      clip-path: polygon(0 28%, 50% 0, 100% 28%, 100% 72%, 50% 100%, 0 72%);
+      transform: rotate(14deg);
+      transform-origin: 100% 100%;
+      width: 70px;
+      height: 70px;
+      background-color: #ffce40;
+      transition: .3s;
+      position: relative; }
+  .section_about .promo_box__title {
+    font-size: 24px;
+    letter-spacing: 0.05em;
+    transition: .3s; }
+  .section_about .promo_box__decorLine {
+    position: relative;
+    max-width: 126px;
+    width: 100px;
+    height: 2px;
+    margin: 20px auto 22px; }
+    .section_about .promo_box__decorLine::before {
+      position: absolute;
+      content: '';
+      height: 100%;
+      left: 15px;
+      right: 15px;
+      background: #d7d7d7;
+      transition: all .3s ease; }
+  .section_about .promo_box__description {
+    font-size: 14px;
+    font-family: "Verdana", "sans-serif";
+    letter-spacing: 0.05em; }
+  .section_about .promo_box:hover {
+    box-shadow: 0 0 13px -4px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02); }
+    .section_about .promo_box:hover .promo_box__decorLine::before {
+      left: 0px;
+      right: 0px;
+      background: #ffce40; }
+    .section_about .promo_box:hover .promo_box__title {
+      letter-spacing: 0.1em; }
+    .section_about .promo_box:hover .figure {
+      transform: rotate(4deg); }
+
+.section_about .about_area {
+  display: flex; }
+  .section_about .about_area__item {
+    flex: 1; }
+
+.section_about .preview_block {
+  position: relative; }
+  .section_about .preview_block__item {
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    top: 0;
+    left: 0;
+    transition: .3s ease; }
+  .section_about .preview_block .preview_border {
+    outline: 2px solid black; }
+  .section_about .preview_block .preview_photo {
+    top: 5%;
+    left: 5%;
+    background: url(../assets/1574866053_telki-v-nizhnem-bele-seksi-31.jpg) no-repeat 0 0;
+    background-size: 100% 100%; }
+  .section_about .preview_block:hover .preview_border {
+    top: 5%;
+    left: 5%; }
+  .section_about .preview_block:hover .preview_photo {
+    top: 0;
+    left: 0; }
+
+.section_about .about_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; }
+  .section_about .about_description__title {
+    font-size: 36px;
+    line-height: 1.20833;
+    letter-spacing: 0.05em;
+    font-weight: 300;
+    margin-bottom: 15px; }
+  .section_about .about_description .tabs {
+    position: relative;
+    margin-bottom: 130px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8px;
+    border-bottom: 3px solid #e1e1e1; }
+    .section_about .about_description .tabs .tab input[type="radio"] {
+      display: none; }
+    .section_about .about_description .tabs .tab :checked ~ .tab-content {
+      display: block; }
+    .section_about .about_description .tabs .tab :checked + .tab-title {
+      color: #ffce40;
+      border-bottom: 3px solid #ffce40; }
+    .section_about .about_description .tabs .tab-title {
+      color: #9b9b9b;
+      font-size: 24px;
+      padding-bottom: 10px;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: .3s; }
+      .section_about .about_description .tabs .tab-title:hover {
+        color: #ffce40; }
+    .section_about .about_description .tabs .tab-content {
+      display: none;
+      position: absolute;
+      padding: 30px 0;
+      left: 0;
+      font-family: "Verdana";
+      color: #9b9b9b;
+      font-size: 14px;
+      line-height: 1.4; }
+
+@media (min-width: 992px) {
+  .section_about .about_description {
+    margin: 0 50px; }
+  .section_about .about_area__item {
+    max-height: 450px;
+    padding: 0 15px;
+    margin-bottom: 50px; }
+  .section_about .area_promo {
+    padding: 100px; }
+  .section_about .promo_box + .promo_box {
+    margin-left: 30px; } }
+
+@media (max-width: 991px) {
+  .section_about .about_area__item {
+    min-height: 250px;
+    margin-top: 50px; }
+  .section_about .area_promo {
+    flex-direction: column;
+    align-items: center; }
+  .section_about .about_area {
+    flex-direction: column; } }
+
+@media (max-width: 575px) {
+  .section_about {
+    padding-left: 20px;
+    padding-right: 20px; } }
 
 .section_vacancy .vacancy_item {
   display: flex;
@@ -645,16 +661,18 @@ header #check {
     padding: 30px 80px; } }
 
 @media (max-width: 991px) {
+  .section_vacancy .vacancy_item {
+    flex-direction: column;
+    margin-top: 50px; }
+  .section_vacancy .photo_block .photo {
+    height: 270px; }
+  .section_vacancy .content_block {
+    padding-top: 30px; } }
+
+@media (max-width: 575px) {
   .section_vacancy {
     padding-left: 20px;
-    padding-right: 20px; }
-    .section_vacancy .vacancy_item {
-      flex-direction: column;
-      margin-top: 50px; }
-    .section_vacancy .photo_block .photo {
-      height: 270px; }
-    .section_vacancy .content_block {
-      padding-top: 30px; } }
+    padding-right: 20px; } }
 
 @media (min-width: 992px) {
   .section_gallery {
@@ -719,18 +737,19 @@ header #check {
         object-fit: cover; } }
 
 .section_contacts {
-  padding: 80px 20px 50px;
   background-color: #5d5b64; }
   .section_contacts__wrap {
     display: flex;
-    justify-content: space-around; }
+    justify-content: space-around;
+    padding-right: 20px;
+    padding-left: 20px; }
   .section_contacts .contacts_block__title {
     text-transform: uppercase;
     color: #fff;
     letter-spacing: .1em;
     font-size: 24px; }
   .section_contacts .contacts_block__button {
-    margin-top: 34px;
+    margin-top: 60px;
     color: #fff;
     border-color: #fff;
     transition: .3s; }
@@ -767,17 +786,19 @@ header #check {
       margin-right: 20px;
       font-size: 30px; }
   @media (max-width: 991px) {
-    .section_contacts__wrap {
-      flex-direction: column; }
-    .section_contacts .contacts_block {
-      margin-bottom: 30px;
-      text-align: center; }
-      .section_contacts .contacts_block ul {
-        text-align: left; } }
+    .section_contacts {
+      padding-bottom: 0; }
+      .section_contacts__wrap {
+        flex-direction: column; }
+      .section_contacts .contacts_block {
+        margin-bottom: 60px;
+        text-align: center; }
+        .section_contacts .contacts_block ul {
+          text-align: left; } }
 
 .footer {
   background-color: #444349;
-  padding: 30px 0;
+  padding: 60px 0;
   text-align: center; }
   .footer__text {
     font-family: "Verdana";
