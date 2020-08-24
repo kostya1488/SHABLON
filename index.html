@@ -18,7 +18,7 @@
     <!-- ------------------------------------------------------------------------------------ common ---------------------------------------- -->
 
     <!-- back to top batton -->
-    <a id="btn_to_top" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+    <a id="btn_to_top" class="menu_link" href="#intro" title="Go to top"><i class="fas fa-arrow-up"></i></a>
     <!-- / back to top batton -->
 
     <!-- modal anketa -->
@@ -30,14 +30,17 @@
             </div>
             <div class="modal_forma">
                 <form id="callback_forma">
-                    <input class="input" type="text" name="name" placeholder="Имя">
-                    <input class="input" type="tel" name="tel" placeholder="Телефон">
+                    <input class="input" type="text" name="name" placeholder="Имя" required>
+                    <input class="input" type="tel" name="tel" placeholder="Телефон" required>
                     <div class="button_wrap">
                         <a class='close-modal' data-modal="#modal1" href="#">Отмена</a>
                         <button>Заказать звонок</button>
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="response">
+            Спасибо! <br> Мы Вам перезвоним в ближайшее время.
         </div>
     </div>
     <!-- / modal anketa -->
@@ -56,7 +59,7 @@
                     <div class="circle c_mid"></div>
                     <div class="circle c_bot"></div>
                 </div>
-                <div class="right_panel">
+                <div class="right_panel pop-up">
                     <ul class="contacts_list">
                         <li class="work_hours"><i class="far fa-clock"></i>c 09:00 до 21:00</li>
                         <li class="phone_number"><i class="fas fa-phone-alt"></i><a href="tel:+380996661488">(099) 666-14-88</a></li>
@@ -72,7 +75,7 @@
                     <span class="b_mid"></span>
                     <span class="b_bot"></span>
                 </div>
-                <nav id="menu_box">
+                <nav id="menu_box" class="pop-up">
                     <ul class="menu">
                         <li class="menu__item">
                             <a class="nav_link menu_link active" href="#intro">Главная</a>
@@ -280,19 +283,19 @@
                 <div class="contacts_block__title">Lorem, ipsum dolor.</div>
                 <ul class="quick_links_list">
                     <li class="quick_links_list__item">
-                        <a href="#">Главная</a>
+                        <a class="menu_link" href="#">Главная</a>
                     </li>
                     <li class="quick_links_list__item">
-                        <a href="#about">Об агентстве</a>
+                        <a class="menu_link" href="#about">Об агентстве</a>
                     </li>
                     <li class="quick_links_list__item">
-                        <a href="#vacancy">Вакансии</a>
+                        <a class="menu_link" href="#vacancy">Вакансии</a>
                     </li>
                     <li class="quick_links_list__item">
-                        <a href="#our_gallery">Галерея</a>
+                        <a class="menu_link" href="#our_gallery">Галерея</a>
                     </li>
                     <li class="quick_links_list__item">
-                        <a href="#contacts">Контакты</a>
+                        <a class="menu_link" href="#contacts">Контакты</a>
                     </li>
                     <li class="quick_links_list__item">
                         <a class="open-modal" data-modal="#modal1" href="#">Анкета</a>

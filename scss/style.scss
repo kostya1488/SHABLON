@@ -182,6 +182,11 @@ section {
     text-align: center;
     color: $brand_secondary_color;
     margin: 0 15px;
+    .response {
+        display: none;
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
     &.open {
         opacity: 1;
         pointer-events: inherit;
@@ -495,13 +500,13 @@ header {
         }
         .messenger-list {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             border-bottom: 1px solid #e1e1e1;
             .list_item i {
                 color: #000;
             }
         }
-        &.open_menu {
+        &.mob_menu_active {
             #menu_box {
                 transform: translateX(0);
             }
@@ -760,8 +765,7 @@ header {
         }
     }
     @media (max-width: $screen_xs_max) {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 120px 20px 60px;
     }
 }
 

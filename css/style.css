@@ -135,6 +135,10 @@ section {
   text-align: center;
   color: #444349;
   margin: 0 15px; }
+  .modal .response {
+    display: none;
+    font-size: 30px;
+    letter-spacing: 1px; }
   .modal.open {
     opacity: 1;
     pointer-events: inherit; }
@@ -388,20 +392,20 @@ header #check {
       background: #ffdb73; }
   header .messenger-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     border-bottom: 1px solid #e1e1e1; }
     header .messenger-list .list_item i {
       color: #000; }
-  header.open_menu #menu_box {
+  header.mob_menu_active #menu_box {
     transform: translateX(0); }
-  header.open_menu #toggle_button {
+  header.mob_menu_active #toggle_button {
     transform: rotate(-180deg); }
-    header.open_menu #toggle_button .b_top {
+    header.mob_menu_active #toggle_button .b_top {
       transform: rotate(-45deg);
       width: 50%;
       left: 0;
       top: 4px; }
-    header.open_menu #toggle_button .b_bot {
+    header.mob_menu_active #toggle_button .b_bot {
       transform: rotate(45deg);
       width: 50%;
       left: 0;
@@ -599,8 +603,7 @@ header #check {
 
 @media (max-width: 575px) {
   .section_about {
-    padding-left: 20px;
-    padding-right: 20px; } }
+    padding: 120px 20px 60px; } }
 
 .section_vacancy .vacancy_item {
   display: flex;
